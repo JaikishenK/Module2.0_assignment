@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Popregular;
+  src: url("/Fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: Popmedium;
+  src: url("/Fonts/Poppins-Medium.ttf");
+}
+body {
+  font-family: Popregular;
+}
+h1 {
+  text-align: center;
+}
+div {
+  display: grid;
+  margin-top: 150px;
+  grid-template-columns: 5% 1fr 2% 1fr 2% 1fr 5%;
+}
+span {
+  border: 3px solid black;
+}
+.chicken {
+  grid-column: 2;
+  background-color: grey;
+  text-align: right;
+}
+.chick-text {
+  text-align: left;
+}
+.text1 {
+  font-family: Popmedium;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: hotpink;
+}
+.beef {
+  grid-column: 4;
+  background-color: grey;
+  text-align: right;
+}
+.beef-text {
+  text-align: left;
+}
+.text2 {
+  font-family: Popmedium;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: red;
+  color: white;
+}
+.sushi {
+  grid-column: 6;
+  background-color: grey;
+  text-align: right;
+}
+.sushi-text {
+  text-align: left;
+}
+.text3 {
+  font-family: Popmedium;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: yellow;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div {
+    display: grid;
+    margin-top: 150px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 5% 44% 2% 44% 5%;
+  }
+  .chicken {
+    grid-row: 1;
+    grid-column: 2/3;
+  }
+  .beef {
+    grid-row: 1;
+    grid-column: 4/5;
+  }
+  .sushi {
+    margin-top: 20px;
+    grid-row: 2;
+    grid-column: 2/5;
+  }
+}
+
+@media (max-width: 767px) {
+  div {
+    display: grid;
+    margin-top: 150px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 5% 90% 5%;
+  }
+  .chicken {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .beef {
+    margin-top: 20px;
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .sushi {
+    margin-top: 20px;
+    grid-row: 3;
+    grid-column: 2;
+  }
+}
